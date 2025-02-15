@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav .wrapper {
+  max-width: 1300px;
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.logo img {
+  width: 60px;
+}
+
+.wrapper .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wrapper .logo h3 {
+  color: #a30a27;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Navigation Links */
+.wrapper .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background: #a30a27;
+  color: #fff;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.slider img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* About Us Section */
+.about {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #a30a27;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Developer Info Section */
+.developer {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.developer h2 {
+  font-size: 32px;
+  color: #a30a27;
+  margin-bottom: 10px;
+}
+
+.developer p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+/* Chain Info Section */
+.chainmain-info-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.chainmain-info-div p {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.chainmain-info-div img {
+  border-radius: 17px;
+  max-width: 250px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 970px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .wrapper .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .wrapper .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .slider {
+    height: 60vh;
+  }
+
+  .about, .developer {
+    padding: 30px;
+  }
+
+  .chainmain-info-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chainmain-info-div p {
+    margin-left: 0;
+  }
+
+  .chainmain-info-div img {
+    max-width: 200px;
+  }
+}

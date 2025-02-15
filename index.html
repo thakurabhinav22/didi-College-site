@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpita Thakur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./source/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="./source/logo.png" alt="Logo" class="logo-img" />
+                <h3>R.R Educational Trust</h3>
+            </div>
+            
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#developer">Developer Info</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img id="slider" src="./source/slider1.png" alt="Slide 1">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>R.R.Educational Trust is a name to reckon with in central suburbs. It was formed under the able leadership of Late Shri.R.R.Singhji ( Ex-Mayor- Mumbai) in the year 1995 and was aptly supported by Shri.Ramchandra Singh, Dr.Shri.Rajendraprasad Singh, Shri. Mahendra Singh and other members of the trust .The trust from then has been providing excellent educational services to the people of Mulund and nearby areas.</p>
+        
+        <h2>From the desk of Chairman</h2>
+        <p><strong>LATE SHRI. R.R.SINGH</strong></p>
+        
+        <div class="chainmain-info-div">
+           
+            <img src="./source/chairman.png" alt="Chairman of RR Edu Trust">
+            <P> “ EDUCATION FOR ALL” has been the mantra of Late Shri. R.R.Singh the Ex-Mayor of Mumbai and the Founder Chairman of R.R.Educational Trust. The vision to provide education for all at affordable price let to the foundation of this educational trust. He has been the torch bearer for all the staff in achieving his vision and mission. He believed that teachers are the backbone of any society, thus he started with teacher training colleges to provide best quality teachers for the nation. Education for the under privileged was his priority which led to the beginning of a Marathi medium school. He believes that change is constant and every child has to upgrade themselves according to changing times. This led to the starting of English medium school and Junior college.
+                He believes that like food, clothing and shelter Education is also the basic necessity of life. If a child is educated he can take care of himself and his family in any situation.</P>
+            
+        </div>
+        
+    </section>
+
+    <!-- Developer Info Section -->
+    <section id="developer" class="developer">
+        <h2>Developer Information</h2>
+        <p><strong>Developed by:</strong> Arpita Vikas Thakur</p>
+        <p><strong>Email:</strong> arpita.thakur.15.stu@rredu.in</p>
+        <p><strong>Batch 24-26:</strong> </p>
+        <p><strong>Class: </strong>  F.Y.B.Ed</p>
+        <p><strong>Roll no:</strong> 16</p>
+    </section>
+
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const slides = ["./source/slider1.png", "./source/slider2.png", "./source/slider3.png"];
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector("#slider").src = slides[index];
+        }
+        setInterval(() => moveSlide(1), 3000);
+    </script>
+</body>
+</html>
