@@ -68,7 +68,7 @@
     <script>
         let index = 0;
         function moveSlide(step) {
-            const slides = ["./source/slider1.png", "./source/slider2.png", "./source/slider3.png"];
+            const slides = ["./source/slider1.png", "./source/slider3.png", "./source/slider4.png", "./source/slider5.png"];
             index = (index + step + slides.length) % slides.length;
             document.querySelector("#slider").src = slides[index];
         }
